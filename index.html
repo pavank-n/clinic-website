@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishna Speech and Hearing Clinic - Professional Hearing Care in Hubballi & Dharwad</title>
+    <meta name="description" content="Krishna Speech and Hearing Clinic in Hubballi and Dharwad. Professional hearing care services, hearing aids, speech therapy, and audiological consultations by expert audiologists.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #fefefe;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 2.7rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact-header {
+            text-align: right;
+        }
+
+        .contact-header h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-header p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* WhatsApp Booking Button */
+        .whatsapp-booking {
+            background: #25D366;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-booking:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-icon {
+            font-size: 1.2rem;
+        }
+
+        /* Navigation */
+        nav {
+            background: #d35400;
+            padding: 1rem 0;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(230, 126, 34, 0.8), rgba(211, 84, 0, 0.8)), 
+            url('images/backg4.jpg');
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: normal;
+        }
+
+        .hero-content p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-highlight {
+            background: rgba(52, 73, 94, 0.9);
+            color: white;
+            padding: 1.5rem 2rem;
+            border-radius: 10px;
+            display: inline-block;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        .locations-banner {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .locations-flex {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .location-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 100px;
+            height: 3px;
+            background: #e67e22;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-text h3 {
+            color: #e67e22;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .about-image {
+            background: url('images/main2.jpg');
+            height: 400px;
+            border-radius: 15px;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 5px solid #e67e22;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #e67e22;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* Hearing Aids Section */
+        .hearing-aids {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .hearing-aids-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .hearing-aid-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .hearing-aid-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .hearing-aid-image {
+            width: 100%;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hearing-aid-info {
+            padding: 2rem;
+        }
+
+        .hearing-aid-info h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .hearing-aid-info p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .features-list li {
+            color: #27ae60;
+            margin-bottom: 0.5rem;
+        }
+
+        .features-list li::before {
+            content: "✓ ";
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        /* Location Section */
+        .location {
+            padding: 80px 0;
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .location-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-top: 5px solid #e67e22;
+        }
+
+        .location-card h3 {
+            color: #e67e22;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        .location-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            gap: 1rem;
+        }
+
+        .location-item-icon {
+            font-size: 1.5rem;
+            color: #e67e22;
+            margin-top: 0.2rem;
+        }
+
+        .location-item-content h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .location-item-content p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .location-item-content a {
+            color: #e67e22;
+            text-decoration: none;
+        }
+
+        .location-item-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #e67e22;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p, .footer-section li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #34495e;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .nav-links {
+                gap: 1.5rem;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content,
+            .locations-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .services-grid,
+            .hearing-aids-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .locations-flex {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .locations-grid {
+                grid-template-columns: 1fr;
+            }
+                .whatsapp-booking {
+                font-size: 0.9rem;
+                padding: 0.6rem 1.2rem;
+                margin-top: 1rem;
+            }
+
+            .whatsapp-icon {
+                font-size: 1rem;
+            }
+        
+        }
+
+        /* Contact Info Styling */
+        .contact-info {
+            background: #e67e22;
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .contact-numbers {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .contact-numbers a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .contact-numbers a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Krishna Speech & Hearing Clinic</div>
+                <div class="contact-header">
+                    <h3>📞 Call Us Today</h3>
+                    <p>9036399999 | 9880088714</p>
+                     <a href="https://wa.me/918151886666?text=Hi,%20I%20would%20like%20to%20book%20an%20appointment%20at%20Krishna%20Speech%20%26%20Hearing%20Clinic" 
+                       class="whatsapp-booking" target="_blank">
+                        <span class="whatsapp-icon">📱</span>
+                        Book Appointment via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Locations Banner -->
+    <div class="locations-banner">
+        <div class="container">
+            <div class="locations-flex">
+                <div class="location-item">
+                    <span>📍</span>
+                    <span><strong>Hubballi:</strong> Near Hotel Ashok Samrat, Lamington Road</span>
+                </div>
+                <div class="location-item">
+                    <span>📍</span>
+                    <span><strong>Dharwad:</strong> P B Road, Opp NTTF BRTS Stop</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hear Life's Beautiful Moments</h1>
+                <p>Expert speech and hearing care services in Hubballi and Dharwad. Advanced hearing solutions with compassionate care for all ages.</p>
+                <div class="hero-highlight">
+                    🎯 Professional Hearing Tests & Speech Therapy Available
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Krishna Speech & Hearing Clinic</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Dedicated to Your Hearing Health</h3>
+                    <p>Krishna Speech and Hearing Clinic has been serving the communities of Hubballi and Dharwad with professional hearing care and speech therapy services. Our experienced audiologists and speech therapists are committed to improving your quality of life through better hearing and communication.</p>
+                    
+                    <p>We understand that hearing loss affects not just the individual but the entire family. That's why we provide comprehensive care that includes detailed assessments, personalized treatment plans, and ongoing support for both patients and their families.</p>
+                    
+                    <p>Our state-of-the-art equipment and modern facilities like, PURE TONE AUDIOMETRY, BERA, OAE, IMPEDANCE and much more ensure accurate hearing loss and effective treatment for all types of hearing and speech disorders.</p>
+                </div>
+                <div class="about-image"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Professional Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>Comprehensive Hearing Evaluations</h3>
+                    <p>Complete audiological assessments using advanced diagnostic equipment to identify hearing loss patterns and recommend appropriate treatment options for optimal hearing health.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🦻</div>
+                    <h3>Hearing Aid Fitting & Programming</h3>
+                    <p>Expert selection, fitting, and programming of hearing aids tailored to your specific hearing loss and lifestyle needs with ongoing adjustments and support.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">👶</div>
+                    <h3>Pediatric Hearing Care</h3>
+                    <p>Specialized hearing and speech services for infants, children including early intervention programs and school-age support services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hearing Aids Section -->
+    <section class="hearing-aids" id="hearing-aids">
+        <div class="container">
+            <h2 class="section-title">Premium Hearing Aid Solutions</h2>
+            <div class="hearing-aids-grid">
+                <div class="hearing-aid-card">
+                    <div class="hearing-aid-image" style="background-image: url('images/BTE.jpg');"></div>
+                    <div class="hearing-aid-info">
+                        <h3>Behind-the-Ear (BTE) Hearing Aids</h3>
+                        <p>Powerful and versatile hearing aids suitable for all degrees of hearing loss. Comfortable design with advanced digital processing technology.</p>
+                        <ul class="features-list">
+                            <li>Suitable for all hearing loss levels</li>
+                            <li>Easy to handle and maintain</li>
+                            <li>Long battery life</li>
+                            <li>Multiple program options</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="hearing-aid-card">
+                    <div class="hearing-aid-image" style="background-image: url('images/ITC_ITE.jpg');"></div>
+                    <div class="hearing-aid-info">
+                        <h3>In-the-Ear (ITE) Hearing Aids</h3>
+                        <p>Custom-made hearing aids that fit comfortably in your ear. Discreet appearance with excellent sound quality and user-friendly controls.</p>
+                        <ul class="features-list">
+                            <li>Custom-fitted for comfort</li>
+                            <li>Discreet appearance</li>
+                            <li>Easy-to-use controls</li>
+                            <li>Natural sound quality</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="hearing-aid-card">
+                    <div class="hearing-aid-image" style="background-image: url('images/RIC_DIDITAL.jpg');"></div>
+                    <div class="hearing-aid-info">
+                        <h3>Digital Hearing Aids</h3>
+                        <p>Advanced digital technology with noise reduction, feedback cancellation, and automatic environment adaptation for superior hearing experience.</p>
+                        <ul class="features-list">
+                            <li>Digital signal processing</li>
+                            <li>Noise reduction technology</li>
+                            <li>Automatic volume adjustment</li>
+                            <li>Multiple listening programs</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="hearing-aid-card">
+                    <div class="hearing-aid-image" style="background-image: url('images/RECHARGABLE.jpg');"></div>
+                    <div class="hearing-aid-info">
+                        <h3>Rechargeable Hearing Aids</h3>
+                        <p>Convenient rechargeable hearing aids with long-lasting battery life. No need for battery replacements with overnight charging capability.</p>
+                        <ul class="features-list">
+                            <li>Rechargeable technology</li>
+                            <li>All-day battery life</li>
+                            <li>Environmentally friendly</li>
+                            <li>Easy charging solutions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="hearing-aid-card">
+                    <div class="hearing-aid-image" style="background-image: url('images/invisible-hearing-aid-for-children.jpg');"></div>
+                    <div class="hearing-aid-info">
+                        <h3>Invisible-In the-Canal (IIC) Hearing Aids</h3>
+                        <p>Custom-made hearing aids that fit comfortably in your ear for students and people with active life styles as it stays secure.</p>
+                        <ul class="features-list">
+                            <li>Tiny in size</li>
+                            <li>Unlimited re-programmable</li>
+                            <li>Best in Performance</li>
+                            <li>Reduces "Occlusion effect" (the blocked-ear feeling)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="hearing-aid-card">
+                    <div class="hearing-aid-image" style="background-image: url('images/CIC-hearing-aids.jpg');"></div>
+                    <div class="hearing-aid-info">
+                        <h3>Completely-in-Canal (CIC) Hearing Aids</h3>
+                        <p>A CIC Hearing Aid is tiny device that fits deep in the ear canal, offering discreet and natural hearing</p>
+                        <ul class="features-list">
+                            <li>Almost invisible</li>
+                            <li>Natural sound</li>
+                            <li>Custom fit</li>
+                            <li>Wind noise reduction</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location" id="locations">
+        <div class="container">
+            <h2 class="section-title">Our Clinic Locations</h2>
+            
+            <div class="contact-info">
+                <h3>Contact Krishna Speech & Hearing Clinic</h3>
+                <div class="contact-numbers">
+                    <a href="tel:9036399999">📞 9036399999</a>
+                    <a href="tel:9880088714">📞 9880088714</a>
+                </div>
+            </div>
+            <div class="locations-grid">
+                <div class="location-card">
+                    <h3>🏥 Hubballi Clinic</h3>
+                    
+                    <div class="location-item">
+                        <div class="location-item-icon">📍</div>
+                        <div class="location-item-content">
+                            <h4>Address</h4>
+                            <p>
+                            <a href="https://share.google/GQZpQhcTsm5vX4iIM" target="_blank">
+                                    Near Hotel Ashok Samrat<br>
+                                    Lamington Road, Hubballi-580020<br>
+                                    Karnataka, India
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <div class="location-item-icon">🕐</div>
+                        <div class="location-item-content">
+                            <h4>Clinic Hours</h4>
+                            <p>Monday - Saturday: 10:00 AM - 7:00 PM<br>
+                            <em>Emergency consultations available</em></p>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <div class="location-item-icon">🚌</div>
+                        <div class="location-item-content">
+                            <h4>How to Reach</h4>
+                            <p>Easy access by bus and auto-rickshaw<br>
+                            Located between Channamma circle and Railway station<br>
+                            Parking facilities available</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <h3>🏥 Dharwad Clinic</h3>
+                    <div class="location-item">
+                        <div class="location-item-icon">📍</div>
+                        <div class="location-item-content">
+                            <h4>Address</h4>
+                            <p>
+                                <a href="https://share.google/zlzhGTmUzr1UWpquy" target="_blank">
+                                    Shop No 8 & 9<br>
+                                    Venkateshwar Complex<br>
+                                    P B Road, Opposite NTTF BRTS Stop<br>
+                                    Dharwad-580001, Karnataka, India
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <div class="location-item-icon">🕐</div>
+                        <div class="location-item-content">
+                            <h4>Clinic Hours</h4>
+                            <p>Monday - Saturday: 11:00 AM - 6:00 PM<br>
+                            <em>Appointments preferred</em></p>
+                        </div>
+                    </div>
+                     <div class="location-item">
+                        <div class="location-item-icon">🚌</div>
+                        <div class="location-item-content">
+                            <h4>How to Reach</h4>
+                            <p>NTTF BRTS stop right opposite the clinic<br>
+                            Easy access by public transport<br>
+                            Ground floor location</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Krishna Speech & Hearing Clinic</h3>
+                    <p>Dedicated to providing comprehensive hearing and speech care services to the communities of Hubballi and Dharwad with professional expertise and compassionate care.</p>
+                    <p><strong>Professional Audiologists & Speech Therapists</strong><br>
+                    Licensed & Certified Healthcare Providers</p>
+                </div>
+                 <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li>Hearing Evaluations</li>
+                        <li>Hearing Aid Fitting</li>
+                        <li>Hearing Aid Replacement</li>
+                        <li>Speech Therapy</li>
+                        <li>Pediatric Care</li>
+                        <li>Follow-up Care</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p><strong>Phone Numbers:</strong><br>
+                    📞 9036399999<br>
+                    📞 9880088714</p>
+                    <p><strong>Locations:</strong><br>
+                    🏥 Hubballi: Lamington Road<br>
+                    🏥 Dharwad: Opp NTTF BRTC Stop</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Clinic Hours</h3>
+                    <p><strong>Hubballi:</strong><br>
+                    Monday - Saturday<br>
+                    10:00 AM - 7:00 PM</p>
+                     <p><strong>Dharwad:</strong><br>
+                    Monday - Saturday<br>
+                    11:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Krishna Speech & Hearing Clinic. All rights reserved. | Professional Hearing Care in Hubballi & Dharwad</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
