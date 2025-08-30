@@ -1,0 +1,1794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishna Speech and Hearing Clinic - Professional Hearing Care in Hubballi & Dharwad</title>
+    <meta name="description" content="Krishna Speech and Hearing Clinic in Hubballi and Dharwad. Professional hearing care services, hearing aids, speech therapy, and audiological consultations by expert audiologists.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #fefefe;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Page visibility classes */
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #54595F 0%, #6EC1E4 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 2.7rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+        }
+
+        .contact-header {
+            text-align: right;
+        }
+
+        .contact-header h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-header p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* WhatsApp Booking Button */
+        .whatsapp-booking {
+            background: #25D366;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-booking:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-icon {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.570-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516z"/></svg>');
+            background-size: contain;
+            background-repeat: no-repeat;
+            flex-shrink: 0;
+        }
+
+        /* Navigation - Fixed to work properly in all screen sizes */
+        nav {
+            background: #6EC1E4;
+            padding: 1rem 0;
+            width: 100%;
+            top: 160px;
+            z-index: 999;
+        }
+
+        .page {
+            margin-top: 0px; /* Increased to account for fixed header and nav */
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links li {
+            margin: 0;   
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            display: block;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(34, 171, 230, 0.8), rgba(34, 171, 230, 0.8)), 
+             url('images/backg4.jpg');
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: normal;
+        }
+
+        .hero-content p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-highlight {
+            background: rgba(89, 105, 121, 0.9);
+            color: white;
+            padding: 1.5rem 2rem;
+            border-radius: 10px;
+            display: inline-block;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        .locations-banner {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .locations-flex {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .location-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 100px;
+            height: 3px;
+            background: #54595F;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-text h3 {
+            color: #54595F;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .about-image {
+            background: url('images/main2.jpg');
+            height: 400px;
+            border-radius: 15px;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 5px solid #54595F;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #54595F;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* Hearing Aids Section */
+        .hearing-aids {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .hearing-aids-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .hearing-aid-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .hearing-aid-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .hearing-aid-image {
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #54595F;
+        }
+
+        .hearing-aid-info {
+            padding: 2rem;
+        }
+
+        .hearing-aid-info h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .hearing-aid-info p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .features-list li {
+            color: #27ae60;
+            margin-bottom: 0.5rem;
+        }
+
+        .features-list li::before {
+            content: "✓ ";
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .learn-more-btn {
+            background: #54595F;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        .learn-more-btn:hover {
+            background: #6EC1E4;
+        }
+
+        /* Brands Section - New Improved Design */
+        .brands {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .brands-image-container {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .brands-combined-image {
+            width: 100%;
+            max-width: 750px;
+            height: auto;
+            background:white;
+            border-radius: 20px;
+            display: flex;
+            flex-wrap:wrap;
+            align-items: center;
+            justify-content: center;
+            gap:9px;
+            margin: 0 auto 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 2px solid #54595F;
+            padding: 5px;
+        }
+
+        .brand-item{
+            flex: 0 1 120px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .brand-item img{
+            max-width: 100px;
+            max-height: 60px;
+            object-fit:contain;
+            transition:transform 0.2s ease;
+            cursor:pointer
+        }
+
+        .brands-learn-more {
+            background: #54595F;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(204, 230, 34, 0.3);
+        }
+
+        .brands-learn-more:hover {
+            background: #6EC1E4;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
+        }
+
+        /* Detail page styles */
+        .detail-header {
+            background: linear-gradient(135deg, #54595F 0%, #6EC1E4 100%);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 0px; /*remove this*/
+        }
+
+        .back-button {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: white;
+            color: #54595F;
+        }
+
+        .detail-content {
+            padding: 4rem 0;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 2rem;
+        }
+
+        .detail-image {
+            background: #f0f0f0;
+            width: 100%;
+            border-radius: 15px;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            color: #54595F;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .detail-info h2 {
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+
+        .detail-description {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 3rem;
+        }
+
+        .features-section {
+            background: #f8f9fa;
+            padding: 3rem;
+            border-radius: 15px;
+            margin-top: 3rem;
+        }
+
+        .features-section h3 {
+            color: #54595F;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .detailed-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #54595F;
+        }
+
+        .feature-item h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-item p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .pricing-section {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .pricing-section h3 {
+            color: #6EC1E4;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .contact-for-price {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Brand Details Page */
+        .brands-detail {
+            padding: 80px;
+        }
+
+        .brand-detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .brand-detail-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-top: 5px solid #54595F;
+        }
+
+        .brand-detail-card h3 {
+            color: #54595F;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .brand-detail-card .brand-tagline {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .brand-detail-card p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .brand-features {
+            list-style: none;
+        }
+
+        .brand-features li {
+            color: #27ae60;
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .brand-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            color: #54595F;
+        }
+
+        /* Location Section */
+        .location {
+            padding: 80px 0;
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .location-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-top: 5px solid #54595F;
+        }
+
+        .location-card h3 {
+            color: #54595F;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        .location-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            gap: 1rem;
+        }
+
+        .location-item-icon {
+            font-size: 1.5rem;
+            color: #54595F;
+            margin-top: 0.2rem;
+        }
+
+        .location-item-content h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .location-item-content p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .location-item-content a {
+            color: #54595F;
+            text-decoration: none;
+        }
+
+        .location-item-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #61ce70;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p, .footer-section li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #34495e;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design - Improved */
+        @media (max-width: 1200px) {
+            .nav-links {
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 968px) {
+            .nav-links {
+                gap: 1.5rem;
+            }
+            
+            .nav-links a {
+                font-size: 1rem;
+                padding: 0.4rem 0.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .logo {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .nav-links a {
+                font-size: 1rem;
+                padding: 0.6rem 1rem;
+            }
+
+            nav {
+                top: 180px;
+                padding: 0.5rem 0;
+            }
+
+            .page {
+                margin-top: 0px;  /*remove this*/
+            }
+
+            .detail-header {
+                margin-top: 0px; /*remove this*/
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content,
+            .locations-grid,
+            .detail-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .services-grid,
+            .hearing-aids-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .locations-flex {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .locations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .whatsapp-booking {
+                font-size: 0.9rem;
+                padding: 0.6rem 1.2rem;
+                margin-top: 1rem;
+            }
+
+            .detailed-features {
+                grid-template-columns: 1fr;
+            }
+            .detail-grid,
+            .brand-detail-grid {
+                grid-template-columns: 1fr;
+                gap:2rem;  
+         }
+            .brands-combined-image {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .brands-combined-image {
+                height: 340px;
+            }
+
+            @media(max-width:768px){
+                .brands-container img{
+                    max-width:80px;
+                }
+            }
+        }
+
+        /* Contact Info Styling */
+        .contact-info {
+            background: #6EC1E4;
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .contact-numbers {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .contact-numbers a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .contact-numbers a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo" onclick="showPage('home')">Krishna Speech & Hearing Clinic</div>
+                <div class="contact-header">
+                    <h3>📞 Call Us Today</h3>
+                    <p>9036399999 | 9880088714</p>
+                     <a href="https://wa.me/918151886666?text=Hi,%20I%20would%20like%20to%20book%20an%20appointment%20at%20Krishna%20Speech%20%26%20Hearing%20Clinic" 
+                       class="whatsapp-booking" target="_blank">
+                        <span class="whatsapp-icon"></span>
+                        Book Appointment via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a onclick="showPage('home')">Home</a></li>
+                <li><a onclick="showPage('home'); scrollToSection('about')">About</a></li>
+                <li><a onclick="showPage('home'); scrollToSection('services')">Services</a></li>
+                <li><a onclick="showPage('home'); scrollToSection('hearing-aids')">Hearing Aids</a></li>
+                <li><a onclick="showPage('home'); scrollToSection('brands')">Brands</a></li>
+                <li><a onclick="showPage('home'); scrollToSection('location')">Locations</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <!-- Locations Banner -->
+        <div class="locations-banner">
+            <div class="container">
+                <div class="locations-flex">
+                    <div class="location-item">
+                        <span>📍</span>
+                        <span><strong>Hubballi:</strong> Near Hotel Ashok Samrat, Lamington Road</span>
+                    </div>
+                    <div class="location-item">
+                        <span>📍</span>
+                        <span><strong>Dharwad:</strong> P B Road, Opp NTTF BRTS Stop</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Hear Life's Beautiful Moments</h1>
+                    <p>Expert speech and hearing care services in Hubballi and Dharwad. Advanced hearing solutions with compassionate care for all ages.</p>
+                    <div class="hero-highlight">
+                        🎯 Professional Hearing Tests & Speech Therapy Available
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about-section">
+            <div class="container">
+                <h2 class="section-title">About Krishna Speech & Hearing Clinic</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Dedicated to Your Hearing Health</h3>
+                        <p>Krishna Speech and Hearing Clinic has been serving the communities of Hubballi and Dharwad with professional hearing care and speech therapy services. Our experienced audiologists and speech therapists are committed to improving your quality of life through better hearing and communication.</p>
+                        
+                        <p>We understand that hearing loss affects not just the individual but the entire family. That's why we provide comprehensive care that includes detailed assessments, personalized treatment plans, and ongoing support for both patients and their families.</p>
+                        
+                        <p>Our state-of-the-art equipment and modern facilities like, PURE TONE AUDIOMETRY, BERA, OAE, IMPEDANCE and much more ensure accurate hearing loss and effective treatment for all types of hearing and speech disorders.</p>
+                    </div>
+                    <div class="about-image"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services-section">
+            <div class="container">
+                <h2 class="section-title">Our Professional Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🔍</div>
+                        <h3>Comprehensive Hearing Evaluations</h3>
+                        <p>Complete audiological assessments using advanced diagnostic equipment to identify hearing loss patterns and recommend appropriate treatment options for optimal hearing health.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">🦻</div>
+                        <h3>Hearing Aid Fitting & Programming</h3>
+                        <p>Expert selection, fitting, and programming of hearing aids tailored to your specific hearing loss and lifestyle needs with ongoing adjustments and support.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">👶</div>
+                        <h3>Pediatric Hearing Care</h3>
+                        <p>Specialized hearing and speech services for infants, children including early intervention programs and school-age support services.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hearing Aids Section -->
+        <section class="hearing-aids" id="hearing-aids-section">
+            <div class="container">
+                <h2 class="section-title">Premium Hearing Aid Solutions</h2>
+                <div class="hearing-aids-grid">
+                    <div class="hearing-aid-card" onclick="showHearingAidDetail('bte')">
+                         <div class="hearing-aid-image" style="background-image: url('images/BTE.jpg');"></div>
+                        <div class="hearing-aid-info">
+                            <h3>Behind-the-Ear (BTE) Hearing Aids</h3>
+                            <p>Powerful and versatile hearing aids suitable for all degrees of hearing loss. Comfortable design with advanced digital processing technology.</p>
+                            <ul class="features-list">
+                                <li>Suitable for all hearing loss levels</li>
+                                <li>Easy to handle and maintain</li>
+                                <li>Long battery life</li>
+                                <li>Multiple program options</li>
+                            </ul>
+                            <button class="learn-more-btn">Learn More</button>
+                        </div>
+                    </div>
+                    
+                    <div class="hearing-aid-card" onclick="showHearingAidDetail('ite')">
+                        <div class="hearing-aid-image" style="background-image: url('images/ITC_ITE.jpg');"></div>
+                        <div class="hearing-aid-info">
+                            <h3>In-the-Ear (ITE) Hearing Aids</h3>
+                            <p>Custom-made hearing aids that fit comfortably in your ear. Discreet appearance with excellent sound quality and user-friendly controls.</p>
+                            <ul class="features-list">
+                                <li>Custom-fitted for comfort</li>
+                                <li>Discreet appearance</li>
+                                <li>Easy-to-use controls</li>
+                                <li>Natural sound quality</li>
+                            </ul>
+                            <button class="learn-more-btn">Learn More</button>
+                        </div>
+                    </div>
+                    
+                    <div class="hearing-aid-card" onclick="showHearingAidDetail('digital')">
+                         <div class="hearing-aid-image" style="background-image: url('images/RIC_DIDITAL.jpg');"></div>
+                        <div class="hearing-aid-info">
+                            <h3>Digital Hearing Aids</h3>
+                            <p>Advanced digital technology with noise reduction, feedback cancellation, and automatic environment adaptation for superior hearing experience.</p>
+                            <ul class="features-list">
+                                <li>Digital signal processing</li>
+                                <li>Noise reduction technology</li>
+                                <li>Automatic volume adjustment</li>
+                                <li>Multiple listening programs</li>
+                            </ul>
+                            <button class="learn-more-btn">Learn More</button>
+                        </div>
+                    </div>
+                    
+                    <div class="hearing-aid-card" onclick="showHearingAidDetail('rechargeable')">
+                        <div class="hearing-aid-image" style="background-image: url('images/RECHARGABLE.jpg');"></div>
+                        <div class="hearing-aid-info">
+                            <h3>Rechargeable Hearing Aids</h3>
+                            <p>Convenient rechargeable hearing aids with long-lasting battery life. No need for battery replacements with overnight charging capability.</p>
+                            <ul class="features-list">
+                                <li>Rechargeable technology</li>
+                                <li>All-day battery life</li>
+                                <li>Environmentally friendly</li>
+                                <li>Easy charging solutions</li>
+                            </ul>
+                            <button class="learn-more-btn">Learn More</button>
+                        </div>
+                    </div>
+
+                    <div class="hearing-aid-card" onclick="showHearingAidDetail('iic')">
+                        <div class="hearing-aid-image" style="background-image: url('images/CIC-hearing-aids.jpg');"></div>
+                        <div class="hearing-aid-info">
+                            <h3>Invisible-In-the-Canal (IIC) Hearing Aids</h3>
+                            <p>Custom-made hearing aids that fit comfortably in your ear for students and people with active lifestyles as it stays secure.</p>
+                            <ul class="features-list">
+                                <li>Tiny in size</li>
+                                <li>Unlimited re-programmable</li>
+                                <li>Best in Performance</li>
+                                <li>Reduces "Occlusion effect"</li>
+                            </ul>
+                            <button class="learn-more-btn">Learn More</button>
+                        </div>
+                    </div>
+
+                    <div class="hearing-aid-card" onclick="showHearingAidDetail('cic')">
+                    <div class="hearing-aid-image" style="background-image: url('images/invisible-hearing-aid-for-children.jpg');"></div>   
+                        <div class="hearing-aid-info">
+                            <h3>Completely-in-Canal (CIC) Hearing Aids</h3>
+                            <p>A CIC Hearing Aid is tiny device that fits deep in the ear canal, offering discreet and natural hearing</p>
+                            <ul class="features-list">
+                                <li>Almost invisible</li>
+                                <li>Natural sound</li>
+                                <li>Custom fit</li>
+                                <li>Wind noise reduction</li>
+                            </ul>
+                            <button class="learn-more-btn">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hearing Aid Brands Section - NEW IMPROVED VERSION -->
+        <section class="brands" id="brands-section">
+            <div class="container">
+                <h2 class="section-title">Leading Hearing Aid Brands</h2>
+                <p style="text-align: center; font-size: 1.2rem; color: #555; margin-bottom: 2rem;">
+                    We partner with the world's most trusted hearing aid manufacturers to bring you cutting-edge technology and superior sound quality.
+                </p>
+                
+                <div class="brands-image-container">
+                    <div class="brands-combined-image">
+                        <!-- Brand logos are embedded in the CSS background -->
+                         <div class="brand-item"><img src="images/brands/phonak.png" alt="Phonak Logo"></div>
+                    <div class="brand-item"><img src="images/brands/signia.png" alt="Signia Logo"></div>
+                    <div class="brand-item"><img src="images/brands/widex.png" alt="Widex Logo"></div>
+                    <div class="brand-item"><img src="images/brands/oticon.png" alt="Oticon Logo"></div>
+                    <div class="brand-item"><img src="images/brands/resound.png" alt="Resound Logo"></div>
+                    <div class="brand-item"><img src="images/brands/unitron.png" alt="Unitron Logo"></div>
+                    <div class="brand-item"><img src="images/brands/audioservice.png" alt="Audio Service Logo"></div>
+                    </div>
+                    <button class="brands-learn-more" onclick="showPage('brands-detail')">
+                        Learn More About Our Brands
+                    </button>
+                </div>
+            </div>
+        </section>
+
+            <!-- Location Section -->
+    <section class="location" id="location-section">
+        <div class="container">
+            <h2 class="section-title">Our Clinic Locations</h2>
+            
+            <div class="contact-info">
+                <h3>Contact Krishna Speech & Hearing Clinic</h3>
+                <div class="contact-numbers">
+                    <a href="tel:9036399999">📞 9036399999</a>
+                    <a href="tel:9880088714">📞 9880088714</a>
+                </div>
+            </div>
+            <div class="locations-grid">
+                <div class="location-card">
+                    <h3>🏥 Hubballi Clinic</h3>
+                    
+                    <div class="location-item">
+                        <div class="location-item-icon">📍</div>
+                        <div class="location-item-content">
+                            <h4>Address</h4>
+                            <p>
+                            <a href="https://share.google/GQZpQhcTsm5vX4iIM" target="_blank">
+                                    Near Hotel Ashok Samrat<br>
+                                    Lamington Road, Hubballi-580020<br>
+                                    Karnataka, India
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <div class="location-item-icon">🕐</div>
+                        <div class="location-item-content">
+                            <h4>Clinic Hours</h4>
+                            <p>Monday - Saturday: 10:00 AM - 7:00 PM<br>
+                            <em>Emergency consultations available</em></p>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <div class="location-item-icon">🚌</div>
+                        <div class="location-item-content">
+                            <h4>How to Reach</h4>
+                            <p>Easy access by bus and auto-rickshaw<br>
+                            Located between Channamma circle and Railway station<br>
+                            Parking facilities available</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <h3>🏥 Dharwad Clinic</h3>
+                    <div class="location-item">
+                        <div class="location-item-icon">📍</div>
+                        <div class="location-item-content">
+                            <h4>Address</h4>
+                            <p>
+                                <a href="https://share.google/zlzhGTmUzr1UWpquy" target="_blank">
+                                    Shop No 8 & 9<br>
+                                    Venkateshwar Complex<br>
+                                    P B Road, Opposite NTTF BRTS Stop<br>
+                                    Dharwad-580001, Karnataka, India
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <div class="location-item-icon">🕐</div>
+                        <div class="location-item-content">
+                            <h4>Clinic Hours</h4>
+                            <p>Monday - Saturday: 11:00 AM - 6:00 PM<br>
+                            <em>Appointments preferred</em></p>
+                        </div>
+                    </div>
+                     <div class="location-item">
+                        <div class="location-item-icon">🚌</div>
+                        <div class="location-item-content">
+                            <h4>How to Reach</h4>
+                            <p>NTTF BRTS stop right opposite the clinic<br>
+                            Easy access by public transport<br>
+                            Ground floor location</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+    <!-- Brand Details Page - NEW PAGE -->
+    <div id="brands-detail" class="page">
+        <div class="detail-header">
+            <div class="container">
+                <button class="back-button" onclick="showPage('home')">← Back to Home</button>
+                <h1>Leading Hearing Aid Brands</h1>
+                <p>Discover the world's most trusted hearing aid manufacturers</p>
+            </div>
+        </div>
+        
+        <div class="detail-content">
+            <div class="container">
+                <div class="brands-detail">
+                    <div class="brand-detail-grid">
+                        <div class="brand-detail-card">
+                            <h3>Phonak</h3>
+                            <p class="brand-tagline">Global Leader in Hearing Solutions</p>
+                            <p>Phonak is one of the world’s most trusted hearing aid brands, known for its Swiss innovation, reliability, and high-quality sound. Their technology focuses on making conversations easy, even in challenging listening environments. </p>
+                            <ul class="brand-features">
+                                <li>automatically adapts to different sound environments</li>
+                                <li>Excellent noise cancellation</li>
+                                <li>direct streaming to smartphones, TVs, and devices</li>
+                                <li>Wide range of styles and power levels</li>
+                                <li>excellent speech understanding in noise and distance</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="brand-detail-card">
+                            <h3>Signia</h3>
+                            <p class="brand-tagline">Artificial Intelligence & Innovation</p>
+                            <p>Signia represents the cutting edge of hearing aid technology with artificial intelligence, smartphone connectivity, and advanced environmental adaptation. Perfect for tech-savvy users who want the latest innovations.</p>
+                            <ul class="brand-features">
+                                <li>AI-powered sound processing</li>
+                                <li>Smartphone app connectivity</li>
+                                <li>Rechargeable options available</li>
+                                <li>Advanced noise reduction</li>
+                                <li>Tinnitus therapy features</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="brand-detail-card">
+                            <h3>Widex</h3>
+                            <p class="brand-tagline">Natural Sound Quality</p>
+                            <p>Danish-crafted Widex hearing aids are renowned for delivering the most natural sound quality in the industry. Their innovative approach focuses on preserving the nuances of natural hearing while providing excellent amplification.</p>
+                            <ul class="brand-features">
+                                <li>Natural sound reproduction</li>
+                                <li>Excellent music listening experience</li>
+                                <li>Advanced rechargeable technology</li>
+                                <li>Superior wind noise management</li>
+                                <li>Comfortable custom fitting options</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="brand-detail-card">
+                            <h3>Audio Service</h3>
+                            <p class="brand-tagline">Premium German Craftsmanship</p>
+                            <p>Audio Service combines traditional German craftsmanship with modern hearing aid technology. Known for their premium quality construction and exceptional sound processing capabilities.</p>
+                            <ul class="brand-features">
+                                <li>Premium build quality</li>
+                                <li>Excellent sound clarity</li>
+                                <li>Custom-fit solutions</li>
+                                <li>Advanced digital features</li>
+                                <li>Reliable long-term performance</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="brand-detail-card">
+                            <h3>Unitron</h3>
+                            <p class="brand-tagline">Personalized Hearing Experience</p>
+                            <p>Canadian innovation meets personalized hearing care with Unitron. Their hearing aids focus on delivering a personalized experience with user-friendly technology and excellent customer support.</p>
+                            <ul class="brand-features">
+                                <li>Personalized sound settings</li>
+                                <li>User-friendly controls</li>
+                                <li>Excellent speech understanding</li>
+                                <li>Flexible programming options</li>
+                                <li>Strong customer support network</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="brand-detail-card">
+                            <h3>Oticon</h3>
+                            <p class="brand-tagline">BrainHearing™ Technology</p>
+                            <p>Danish hearing care pioneer Oticon focuses on how the brain processes sound with their revolutionary BrainHearing™ technology. Their hearing aids work with your brain's natural processes to provide superior hearing.</p>
+                            <ul class="brand-features">
+                                <li>BrainHearing™ technology</li>
+                                <li>OpenSound Navigator</li>
+                                <li>Comprehensive hearing solutions</li>
+                                <li>Pediatric hearing aid options</li>
+                                <li>Advanced connectivity features</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="brand-detail-card">
+                            <h3>ReSound</h3>
+                            <p class="brand-tagline">Smart Hearing Solutions</p>
+                            <p>ReSound offers smart hearing aids with direct iPhone connectivity and advanced environmental adaptation. Their hearing aids automatically adjust to different listening situations for optimal hearing in any environment.</p>
+                            <ul class="brand-features">
+                                <li>Direct iPhone connectivity</li>
+                                <li>Smart environmental adaptation</li>
+                                <li>Advanced noise reduction</li>
+                                <li>Rechargeable options</li>
+                                <li>Comprehensive app control</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-section" style="margin-top: 4rem;">
+                        <h3>Find Your Perfect Brand Match</h3>
+                        <p class="contact-for-price">Our expert audiologists will help you choose the right brand and model based on your hearing needs, lifestyle, and preferences.</p>
+                        <a href="https://wa.me/918151886666?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20hearing%20aid%20brands%20and%20find%20the%20right%20one%20for%20me." 
+                           class="whatsapp-booking" target="_blank">
+                            <span class="whatsapp-icon"></span>
+                            Consult Our Experts
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Detail Pages for each hearing aid type -->
+    
+    <!-- BTE Detail Page -->
+    <div id="bte-detail" class="page">
+        <div class="detail-header">
+            <div class="container">
+                <button class="back-button" onclick="showPage('home')">← Back to Home</button>
+                <h1>Behind-the-Ear (BTE) Hearing Aids</h1>
+                <p>Powerful, versatile, and reliable hearing solutions</p>
+            </div>
+        </div>
+        
+        <div class="detail-content">
+            <div class="container">
+                <div class="detail-grid">
+         <div class="hearing-aid-image" style="background-image: url('images/BTE.jpg');"></div>           
+                    <div class="detail-info">
+                        <h2>Complete Hearing Solution</h2>
+                        <div class="detail-description">
+                            Behind-the-Ear (BTE) hearing aids are the most versatile and powerful type of hearing aids available. They sit comfortably behind your ear and are connected to a custom earpiece that fits in your ear canal. BTE hearing aids are suitable for people with all degrees of hearing loss, from mild to profound.
+                        </div>
+                        
+                        <div class="features-section">
+                            <h3>Key Features & Benefits</h3>
+                            <div class="detailed-features">
+                                <div class="feature-item">
+                                    <h4>🔊 Powerful Amplification</h4>
+                                    <p>Suitable for all degrees of hearing loss, including severe to profound hearing loss.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>🔄 Easy Maintenance</h4>
+                                    <p>Simple to clean and maintain with user-friendly battery replacement.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>🔋 Long Battery Life</h4>
+                                    <p>Extended battery life with options for rechargeable batteries.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>📱 Multiple Programs</h4>
+                                    <p>Various listening programs for different environments and situations.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>🎛️ Manual Controls</h4>
+                                    <p>Easy-to-use volume and program controls for personalized adjustment.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>🌧️ Moisture Resistant</h4>
+                                    <p>Protected against moisture and dust for daily reliability.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="pricing-section">
+                            <h3>Get Your BTE Hearing Aid</h3>
+                            <p class="contact-for-price">Contact us for personalized pricing and fitting consultation</p>
+                            <a href="https://wa.me/918151886666?text=Hi,%20I'm%20interested%20in%20BTE%20hearing%20aids.%20Please%20provide%20more%20information." 
+                               class="whatsapp-booking" target="_blank">
+                                <span class="whatsapp-icon"></span>
+                                Get Quote via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rechargeable Detail Page -->
+    <div id="rechargeable-detail" class="page">
+        <div class="detail-header">
+            <div class="container">
+                <button class="back-button" onclick="showPage('home')">← Back to Home</button>
+                <h1>Rechargeable Hearing Aids</h1>
+                <p>Convenient, eco-friendly, and always ready to use</p>
+            </div>
+        </div>
+        
+        <div class="detail-content">
+            <div class="container">
+                <div class="detail-grid">
+                 <div class="hearing-aid-image" style="background-image: url('images/RECHARGABLE.jpg');"></div>    
+                    <div class="detail-info">
+                        <h2>Ultimate Convenience</h2>
+                        <div class="detail-description">
+                            Rechargeable hearing aids eliminate the need for constant battery changes. With advanced lithium-ion battery technology, these hearing aids provide all-day power and can be easily recharged overnight for continuous, reliable hearing support.
+                        </div>
+                        
+                        <div class="features-section">
+                            <h3>Key Features & Benefits</h3>
+                            <div class="detailed-features">
+                                <div class="feature-item">
+                                    <h4>🔋 Long-Lasting Battery</h4>
+                                    <p>Up to 24+ hours of use on a single charge with quick charging capability.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>🌱 Eco-Friendly</h4>
+                                    <p>Environmentally friendly - no disposable batteries needed.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>⚡ Easy Charging</h4>
+                                    <p>Simple overnight charging with portable charging cases available.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>💰 Cost Effective</h4>
+                                    <p>Save money on battery purchases over the lifetime of the device.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>🛡️ Reliable Power</h4>
+                                    <p>Consistent power output throughout the day without battery fade.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>📱 Smart Features</h4>
+                                    <p>Advanced digital features with smartphone app connectivity.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="pricing-section">
+                            <h3>Get Your Rechargeable Hearing Aid</h3>
+                            <p class="contact-for-price">Experience the convenience of rechargeable technology</p>
+                            <a href="https://wa.me/918151886666?text=Hi,%20I'm%20interested%20in%20rechargeable%20hearing%20aids.%20Please%20provide%20more%20information." 
+                               class="whatsapp-booking" target="_blank">
+                                <span class="whatsapp-icon"></span>
+                                Get Quote via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- IIC Detail Page -->
+    <div id="iic-detail" class="page">
+        <div class="detail-header">
+            <div class="container">
+                <button class="back-button" onclick="showPage('home')">← Back to Home</button>
+                <h1>Invisible-In-the-Canal (IIC) Hearing Aids</h1>
+                <p>Nearly invisible hearing solutions for active lifestyles</p>
+            </div>
+        </div>
+        
+        <div class="detail-content">
+            <div class="container">
+                <div class="detail-grid">
+                <div class="hearing-aid-image" style="background-image: url('images/CIC-hearing-aids.jpg');"></div>    
+                    <div class="detail-info">
+                        <h2>Discreet & Secure</h2>
+                        <div class="detail-description">
+                            Invisible-In-the-Canal (IIC) hearing aids are the most discreet hearing aids available. They fit deep in your ear canal, making them virtually invisible to others. Perfect for students, professionals, and anyone with an active lifestyle who wants hearing help without anyone knowing.
+                        </div>
+                        
+                        <div class="features-section">
+                            <h3>Key Features & Benefits</h3>
+                            <div class="detailed-features">
+                                <div class="feature-item">
+                                    <h4>👻 Nearly Invisible</h4>
+                                    <p>Sits deep in the ear canal - virtually undetectable to others.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>🔄 Re-programmable</h4>
+                                    <p>Unlimited re-programming capability for changing hearing needs.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>🏃 Secure Fit</h4>
+                                    <p>Stays securely in place during physical activities and sports.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>🎯 Best Performance</h4>
+                                    <p>Excellent sound quality with natural hearing experience.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>🚫 Reduced Occlusion</h4>
+                                    <p>Minimizes the "blocked-ear" feeling common with other hearing aids.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>📚 Student Friendly</h4>
+                                    <p>Ideal for students and young professionals who prefer discretion.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="pricing-section">
+                            <h3>Get Your IIC Hearing Aid</h3>
+                            <p class="contact-for-price">Custom fitting required - schedule your consultation today</p>
+                            <a href="https://wa.me/918151886666?text=Hi,%20I'm%20interested%20in%20IIC%20hearing%20aids.%20Please%20provide%20more%20information." 
+                               class="whatsapp-booking" target="_blank">
+                                <span class="whatsapp-icon"></span>
+                                Get Quote via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CIC Detail Page -->
+    <div id="cic-detail" class="page">
+        <div class="detail-header">
+            <div class="container">
+                <button class="back-button" onclick="showPage('home')">← Back to Home</button>
+                <h1>Completely-in-Canal (CIC) Hearing Aids</h1>
+                <p>Tiny, discreet, and naturally comfortable</p>
+            </div>
+        </div>
+        
+        <div class="detail-content">
+            <div class="container">
+                <div class="detail-grid">
+                 <div class="hearing-aid-image" style="background-image: url('images/invisible-hearing-aid-for-children.jpg');"></div>        
+                    <div class="detail-info">
+                        <h2>Natural Hearing Experience</h2>
+                        <div class="detail-description">
+                            Completely-in-Canal (CIC) hearing aids are tiny devices that fit deep in your ear canal. They offer excellent discretion and natural sound quality by utilizing your ear's natural acoustic properties. The deep placement in the ear canal provides natural sound localization and reduces wind noise.
+                        </div>
+                        
+                        <div class="features-section">
+                            <h3>Key Features & Benefits</h3>
+                            <div class="detailed-features">
+                                <div class="feature-item">
+                                    <h4>🙈 Almost Invisible</h4>
+                                    <p>Very small size makes them nearly undetectable when worn.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>🎵 Natural Sound</h4>
+                                    <p>Takes advantage of your ear's natural shape for optimal sound quality.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>✨ Custom Fit</h4>
+                                    <p>Individually crafted to match your unique ear canal shape.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>🌪️ Wind Noise Reduction</h4>
+                                    <p>Deep placement naturally reduces troublesome wind noise.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>📍 Good Localization</h4>
+                                    <p>Natural sound localization helps you identify where sounds come from.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>👂 Comfortable</h4>
+                                    <p>Lightweight and comfortable for extended daily wear.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="pricing-section">
+                            <h3>Get Your CIC Hearing Aid</h3>
+                            <p class="contact-for-price">Experience natural, discreet hearing - contact us for fitting</p>
+                            <a href="https://wa.me/918151886666?text=Hi,%20I'm%20interested%20in%20CIC%20hearing%20aids.%20Please%20provide%20more%20information." 
+                               class="whatsapp-booking" target="_blank">
+                                <span class="whatsapp-icon"></span>
+                                Get Quote via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ITE Detail Page -->
+    <div id="ite-detail" class="page">
+        <div class="detail-header">
+            <div class="container">
+                <button class="back-button" onclick="showPage('home')">← Back to Home</button>
+                <h1>In-the-Ear (ITE) Hearing Aids</h1>
+                <p>Custom-fitted comfort with natural sound quality</p>
+            </div>
+        </div>
+        
+        <div class="detail-content">
+            <div class="container">
+                <div class="detail-grid">
+                <div class="hearing-aid-image" style="background-image: url('images/ITC_ITE.jpg');"></div>    
+                    <div class="detail-info">
+                        <h2>Custom Comfort & Discretion</h2>
+                        <div class="detail-description">
+                            In-the-Ear (ITE) hearing aids are custom-made to fit the unique shape of your ear. They sit in the outer portion of your ear canal and are more discreet than BTE models while still providing excellent sound quality and easy-to-use controls.
+                        </div>
+                        
+                        <div class="features-section">
+                            <h3>Key Features & Benefits</h3>
+                            <div class="detailed-features">
+                                <div class="feature-item">
+                                    <h4>🎭 Discreet Design</h4>
+                                    <p>Less visible than BTE hearing aids while maintaining excellent performance.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>✨ Custom Fit</h4>
+                                    <p>Made specifically for your ear shape for maximum comfort and security.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>🎵 Natural Sound</h4>
+                                    <p>Excellent sound quality with natural directional hearing.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>👆 Easy Controls</h4>
+                                    <p>Accessible volume and program controls right at your fingertips.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>🔊 Good for Mild-Moderate Loss</h4>
+                                    <p>Ideal for people with mild to moderate hearing loss.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>📞 Telephone Compatible</h4>
+                                    <p>Excellent compatibility with telephone and mobile phone use.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="pricing-section">
+                            <h3>Get Your ITE Hearing Aid</h3>
+                            <p class="contact-for-price">Custom fitting consultation and competitive pricing available</p>
+                            <a href="https://wa.me/918151886666?text=Hi,%20I'm%20interested%20in%20ITE%20hearing%20aids.%20Please%20provide%20more%20information." 
+                               class="whatsapp-booking" target="_blank">
+                                <span class="whatsapp-icon"></span>
+                                Get Quote via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Digital Detail Page -->
+    <div id="digital-detail" class="page">
+        <div class="detail-header">
+            <div class="container">
+                <button class="back-button" onclick="showPage('home')">← Back to Home</button>
+                <h1>Digital Hearing Aids</h1>
+                <p>Advanced technology for superior hearing experience</p>
+            </div>
+        </div>
+        
+        <div class="detail-content">
+            <div class="container">
+                <div class="detail-grid">
+                <div class="hearing-aid-image" style="background-image: url('images/RIC_DIDITAL.jpg');"></div>    
+                    <div class="detail-info">
+                        <h2>Cutting-Edge Technology</h2>
+                        <div class="detail-description">
+                            Digital hearing aids represent the latest in hearing aid technology. They use advanced digital signal processing to provide superior sound quality, automatic adjustments, and intelligent features that adapt to your listening environment in real-time.
+                        </div>
+                        
+                        <div class="features-section">
+                            <h3>Key Features & Benefits</h3>
+                            <div class="detailed-features">
+                                <div class="feature-item">
+                                    <h4>🤖 Smart Processing</h4>
+                                    <p>Advanced digital signal processing for clear, natural sound reproduction.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>🔇 Noise Reduction</h4>
+                                    <p>Intelligent noise reduction technology filters out background noise.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>🎛️ Auto Adjustment</h4>
+                                    <p>Automatic volume and program changes based on your environment.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>📊 Multiple Programs</h4>
+                                    <p>Various listening programs for different situations and preferences.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>🔄 Feedback Cancellation</h4>
+                                    <p>Advanced feedback cancellation eliminates whistling and squealing.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4>🌐 Connectivity Options</h4>
+                                    <p>Bluetooth connectivity for smartphones and other devices.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="pricing-section">
+                            <h3>Get Your Digital Hearing Aid</h3>
+                            <p class="contact-for-price">Experience the latest in hearing aid technology - contact us today</p>
+                            <a href="https://wa.me/918151886666?text=Hi,%20I'm%20interested%20in%20digital%20hearing%20aids.%20Please%20provide%20more%20information." 
+                               class="whatsapp-booking" target="_blank">
+                                <span class="whatsapp-icon"></span>
+                                Get Quote via WhatsApp
+                            </a>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Krishna Speech & Hearing Clinic</h3>
+                    <p>Dedicated to improving your hearing health and quality of life through professional audiological care and advanced hearing solutions.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li>Comprehensive Hearing Evaluations</li>
+                        <li>Hearing Aid Fitting & Programming</li>
+                        <li>Speech Therapy</li>
+                        <li>Pediatric Hearing Care</li>
+                        <li>Tinnitus Management</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p>📞 9036399999 | 9880088714</p>
+                    <p>📧 krishna.speech.hearing@gmail.com</p>
+                    <p>📍 Hubballi: Near Hotel Ashok Samrat, Lamington Road</p>
+                    <p>📍 Dharwad: P B Road, Opp NTTF BRTS Stop</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Krishna Speech & Hearing Clinic. All rights reserved. | Serving Hubballi & Dharwad with professional hearing care.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation functions
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Show the selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+        
+        function showHearingAidDetail(aidType) {
+            showPage(aidType + '-detail');
+        }
+        
+        function scrollToSection(sectionId) {
+            setTimeout(() => {
+                const element = document.getElementById(sectionId + '-section');
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+        }
+        
+        // Smooth scrolling for navigation links
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle hash navigation
+            if (window.location.hash) {
+                const hash = window.location.hash.substring(1);
+                if (hash.includes('-detail')) {
+                    showPage(hash);
+                } else {
+                    scrollToSection(hash);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+                    
+
+    
