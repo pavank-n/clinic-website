@@ -846,15 +846,19 @@
             }
 
             @media(max-width:768px){
-                .brand-item{
-                 flex:0 1 45%;
-                }
                 .brands-container img{
                     max-width:80px;
                 }
-            }
+            @media(max-width:600px){
+                .brand-item{
+                    flex:0 1 45%;
+                    margin: 5px;
+                }
+                .brand-item img{
+                    max-width: 80px;
+                }
         }
-
+    }
         /* Contact Info Styling */
         .contact-info {
             background: #6EC1E4;
@@ -1796,6 +1800,7 @@
 
 
     
+
 
 
 
