@@ -577,62 +577,75 @@
         }
 
         /* Brand Details Page */
-        .brands-detail {
-            padding: 80px;
-        }
+.brands-detail {
+    padding: 4rem 2rem; /* smaller padding for better mobile fit */
+}
 
-        .brand-detail-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-        }
+.brand-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
 
-        .brand-detail-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-top: 5px solid #54595F;
-        }
+.brand-detail-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #54595F;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .brand-detail-card h3 {
-            color: #54595F;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
+.brand-detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
 
-        .brand-detail-card .brand-tagline {
-            font-style: italic;
-            color: #666;
-            margin-bottom: 1.5rem;
-        }
+.brand-detail-card h3 {
+    color: #2c3e50;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
 
-        .brand-detail-card p {
-            color: #555;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
+.brand-detail-card .brand-tagline {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
 
-        .brand-features {
-            list-style: none;
-        }
+.brand-detail-card p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
 
-        .brand-features li {
-            color: #27ae60;
-            margin-bottom: 0.8rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
+.brand-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
 
-        .brand-features li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-            color: #54595F;
-        }
+.brand-features li {
+    color: #27ae60;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
 
+.brand-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    color: #54595F;
+}
+        
+        
         /* Location Section */
         .location {
             padding: 80px 0;
@@ -857,28 +870,43 @@
             }
         }
     }
-        /* Mobile Fix */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .brand-detail-grid {
-    display: grid;
-    grid-template-columns: 1fr !important; /* force single column full width */
-    gap: 1.5rem;
-    margin: 0; /* remove extra margin */
-  }
+    .brands-detail {
+        padding: 2rem 1.5rem;
+    }
 
-  .brand-detail-card {
-    width: 100% !important;  /* stretch full width */
-    max-width: 100% !important;
-    padding: 1.2rem !important; /* reduce padding for small screens */
-    box-sizing: border-box; /* include padding inside width */
-  }
+    .brand-detail-card {
+        padding: 1.5rem;
+    }
 
-  .container {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 0 10px !important; /* small side padding */
-  }
+    .brand-detail-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .brand-detail-card p {
+        font-size: 0.95rem;
+    }
 }
+
+@media (max-width: 480px) {
+    .brands-detail {
+        padding: 1.5rem 1rem;
+    }
+
+    .brand-detail-card {
+        padding: 1.2rem;
+    }
+
+    .brand-detail-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .brand-detail-card p {
+        font-size: 0.9rem;
+    }
+}
+
         /* Contact Info Styling */
         .contact-info {
             background: #6EC1E4;
@@ -1820,6 +1848,7 @@
 
 
     
+
 
 
 
