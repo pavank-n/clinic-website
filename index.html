@@ -857,6 +857,28 @@
             }
         }
     }
+        /* Mobile Fix */
+@media (max-width: 768px) {
+  .brand-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr !important; /* force single column full width */
+    gap: 1.5rem;
+    margin: 0; /* remove extra margin */
+  }
+
+  .brand-detail-card {
+    width: 100% !important;  /* stretch full width */
+    max-width: 100% !important;
+    padding: 1.2rem !important; /* reduce padding for small screens */
+    box-sizing: border-box; /* include padding inside width */
+  }
+
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 10px !important; /* small side padding */
+  }
+}
         /* Contact Info Styling */
         .contact-info {
             background: #6EC1E4;
@@ -1798,6 +1820,7 @@
 
 
     
+
 
 
 
