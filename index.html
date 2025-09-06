@@ -583,7 +583,7 @@
 
         .brand-detail-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 3rem;
             margin-top: 3rem;
         }
@@ -859,20 +859,15 @@
         }
         @media (max-width: 768px) {
        .container {
-        padding: 0 10px;
+        padding: 0 10px !important;
        }
        .brand-detail-grid {
         grid-template-columns: 1fr !important; /* force full width */
       }
       .brand-detail-card {
-       padding: 1.5rem;
+       padding: 1.2rem !important;
          }
       }
-      @media (max-width: 480px) {
-      .brand-detail-card {
-        padding: 1.2rem;
-       }
-     }
 
         /* Contact Info Styling */
         .contact-info {
@@ -1815,6 +1810,7 @@
 
 
     
+
 
 
 
