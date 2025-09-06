@@ -624,6 +624,7 @@
 .brand-features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    list-style: none;
     gap: 1.5rem;
     margin-top: 1rem;
 }
@@ -638,7 +639,9 @@
 }
 
 .brand-features li::before {
+    content: "✓";
     position: absolute;
+    left: 0;
     font-weight: bold;
     color: #54595F;
 }
@@ -1809,6 +1812,7 @@
 
 
     
+
 
 
 
