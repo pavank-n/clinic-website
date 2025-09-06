@@ -53,7 +53,7 @@
         }
 
         .logo {
-            font-size: 3.5rem;
+            font-size: clamp(2rem, 5vw, 3.5rem);;
             font-weight: bold;
             display: flex;
             align-items: center;
@@ -66,12 +66,12 @@
         }
 
         .contact-header h3 {
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 3vw, 1.5rem);;
             margin-bottom: 0.5rem;
         }
 
         .contact-header p {
-            font-size: 1rem;
+            font-size: (0.9rem, 2.5vw, 1.2rem);
             opacity: 0.9;
         }
 
@@ -847,6 +847,14 @@
                 .brands-container img{
                     max-width:80px;
                 }
+            }
+        }
+        @media(max-width:768px){
+            .logo{
+                font-size:3rem;
+            }
+            .contact-header h3{
+                font-size:1.5rem;
             }
         }
 
@@ -1791,6 +1799,7 @@
 
 
     
+
 
 
 
